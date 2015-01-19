@@ -5,3 +5,25 @@ api = 2
 ; Core
 projects[drupal][version] = "7.34"
 
+; Modules
+projects[admin_menu][subdir] = "contrib"
+projects[admin_menu][version] = "3.0-rc5"
+
+projects[ctools][subdir] = "contrib"
+projects[ctools][version] = "1.5"
+
+projects[ckeditor][subdir] = "contrib"
+projects[ckeditor][version] = "1.16"
+
+projects[date][subdir] = "contrib"
+projects[date][version] = "2.8"
+
+projects[entity][subdir] = "contrib"
+projects[entity][version] = "1.5"
+
+projects[entityreference][subdir] = "contrib"
+projects[entityreference][version] = "1.1"
+
+projects[views][subdir] = "contrib"
+projects[views][version] = "3.8"
+
