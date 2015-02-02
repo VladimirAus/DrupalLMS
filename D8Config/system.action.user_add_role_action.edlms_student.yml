@@ -1,0 +1,14 @@
+uuid: 978b84d7-0c9e-4190-9202-2ac71983dade
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.edlms_student
+  module:
+    - user
+id: user_add_role_action.edlms_student
+label: 'Add the Student role to the selected users'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: edlms_student

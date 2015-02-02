@@ -1,0 +1,21 @@
+uuid: 3aee3964-3e7c-4854-8d00-e427788d0a50
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.edlms_institution
+id: node.edlms_institution.promote
+field_name: promote
+entity_type: node
+bundle: edlms_institution
+label: Promote
+description: 'A boolean indicating whether the node should be displayed on the front page.'
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings: {  }
+third_party_settings: {  }
+field_type: boolean

@@ -1,0 +1,27 @@
+uuid: 3ff9871c-1193-4bbe-8e19-251407768f77
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.edlms_course.body
+    - node.type.edlms_course
+  module:
+    - text
+    - user
+id: node.edlms_course.teaser
+targetEntityType: node
+bundle: edlms_course
+mode: teaser
+content:
+  links:
+    weight: 100
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+hidden: {  }
+third_party_settings: {  }

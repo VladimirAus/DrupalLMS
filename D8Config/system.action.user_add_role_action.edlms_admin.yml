@@ -1,0 +1,14 @@
+uuid: f8d05036-ef54-4476-ac00-d2b0e8b65177
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.edlms_admin
+  module:
+    - user
+id: user_add_role_action.edlms_admin
+label: 'Add the Edu admin role to the selected users'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: edlms_admin

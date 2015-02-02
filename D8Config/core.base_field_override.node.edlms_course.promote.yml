@@ -1,0 +1,21 @@
+uuid: 9cd5b3f9-56b5-4c15-8300-bd057f966c29
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.edlms_course
+id: node.edlms_course.promote
+field_name: promote
+entity_type: node
+bundle: edlms_course
+label: Promote
+description: 'A boolean indicating whether the node should be displayed on the front page.'
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings: {  }
+third_party_settings: {  }
+field_type: boolean

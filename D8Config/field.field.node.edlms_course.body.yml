@@ -1,0 +1,23 @@
+uuid: d5161d5a-1061-43d0-af1a-269c3f7b409a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.edlms_course
+  module:
+    - text
+id: node.edlms_course.body
+field_name: body
+entity_type: node
+bundle: edlms_course
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+third_party_settings: {  }
+field_type: text_with_summary

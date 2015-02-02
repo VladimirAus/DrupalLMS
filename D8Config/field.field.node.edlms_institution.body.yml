@@ -1,0 +1,23 @@
+uuid: 76585352-19df-4d93-9b00-f77497eb9aef
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.edlms_institution
+  module:
+    - text
+id: node.edlms_institution.body
+field_name: body
+entity_type: node
+bundle: edlms_institution
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+third_party_settings: {  }
+field_type: text_with_summary

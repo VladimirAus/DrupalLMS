@@ -1,0 +1,8 @@
+uuid: 719106a3-b628-4448-9e02-2e1e11c59282
+langcode: en
+status: true
+dependencies: {  }
+id: edlms_teacher
+label: Teacher
+weight: 2
+permissions: {  }

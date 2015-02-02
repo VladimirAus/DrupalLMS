@@ -1,0 +1,8 @@
+uuid: 92163fc4-b970-4086-9200-e0ff04ddbb16
+langcode: en
+status: true
+dependencies: {  }
+id: edlms_admin
+label: 'Edu admin'
+weight: 4
+permissions: {  }

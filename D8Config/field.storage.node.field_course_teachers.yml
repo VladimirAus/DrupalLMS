@@ -1,0 +1,19 @@
+uuid: 498d9ad8-3c79-4de9-8b39-578af1497772
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_reference
+    - node
+id: node.field_course_teachers
+field_name: field_course_teachers
+entity_type: node
+type: entity_reference
+settings:
+  target_type: user
+module: entity_reference
+locked: false
+cardinality: 5
+translatable: true
+indexes: {  }
+persist_with_no_fields: false

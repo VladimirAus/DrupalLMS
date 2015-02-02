@@ -1,0 +1,27 @@
+uuid: 01b0455c-b321-4b53-9b03-3b98a73b6b70
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.edlms_institution.body
+    - node.type.edlms_institution
+  module:
+    - text
+    - user
+id: node.edlms_institution.teaser
+targetEntityType: node
+bundle: edlms_institution
+mode: teaser
+content:
+  links:
+    weight: 100
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+hidden: {  }
+third_party_settings: {  }

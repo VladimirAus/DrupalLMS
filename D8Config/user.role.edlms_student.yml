@@ -1,0 +1,8 @@
+uuid: fe3a10ed-30de-47e5-9426-38f37e2ad2a5
+langcode: en
+status: true
+dependencies: {  }
+id: edlms_student
+label: Student
+weight: 3
+permissions: {  }

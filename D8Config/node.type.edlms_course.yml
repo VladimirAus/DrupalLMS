@@ -1,0 +1,17 @@
+uuid: 96243e47-e131-4861-8608-8d643984ea32
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+name: Course
+type: edlms_course
+description: 'Course that belongs to particular institution and is taught by Teacher(s).'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: 'main:'

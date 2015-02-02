@@ -1,0 +1,14 @@
+uuid: 7be5d304-0490-40f1-8841-6515ee57a0e5
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.edlms_teacher
+  module:
+    - user
+id: user_remove_role_action.edlms_teacher
+label: 'Remove the Teacher role from the selected users'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: edlms_teacher

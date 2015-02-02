@@ -1,0 +1,33 @@
+uuid: a46d3456-3bf0-4ee7-a604-4f14931a2b46
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.edlms_course.body
+    - field.field.node.edlms_course.field_course_teachers
+    - node.type.edlms_course
+  module:
+    - text
+    - user
+id: node.edlms_course.default
+targetEntityType: node
+bundle: edlms_course
+mode: default
+content:
+  links:
+    weight: 100
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+  field_course_teachers:
+    weight: 102
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+hidden: {  }
+third_party_settings: {  }

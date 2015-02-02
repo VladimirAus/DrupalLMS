@@ -1,0 +1,29 @@
+uuid: 1598e7fe-180c-4c0f-9d02-021d4cda714e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_course_teachers
+    - node.type.edlms_course
+  module:
+    - entity_reference
+id: node.edlms_course.field_course_teachers
+field_name: field_course_teachers
+entity_type: node
+bundle: edlms_course
+label: Teachers
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings:
+    filter:
+      type: _none
+    target_bundles: {  }
+    sort:
+      field: _none
+third_party_settings: {  }
+field_type: entity_reference

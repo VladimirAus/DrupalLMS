@@ -1,0 +1,14 @@
+uuid: 3ca5585b-eb4c-4f54-bb00-d0bced074897
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.edlms_admin
+  module:
+    - user
+id: user_remove_role_action.edlms_admin
+label: 'Remove the Edu admin role from the selected users'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: edlms_admin

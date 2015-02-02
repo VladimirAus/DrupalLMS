@@ -1,0 +1,14 @@
+uuid: d8432fcc-870a-4ee8-914e-78949af80b31
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.edlms_student
+  module:
+    - user
+id: user_remove_role_action.edlms_student
+label: 'Remove the Student role from the selected users'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: edlms_student
