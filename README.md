@@ -13,7 +13,7 @@ Learning Management System (LMS) based on [Drupal 8]. Main features include
 You need Gulp installed globally:
 
 ```sh
-$ bash -x /bin/
+$ bash -x /bin/lms.d8.install.with-config.sh
 ```
 
 ### Requirements
