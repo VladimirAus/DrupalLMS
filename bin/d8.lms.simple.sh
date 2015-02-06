@@ -6,7 +6,7 @@ readonly DBSERVER="localhost"
 readonly DBLOGIN="root"
 readonly DBPSWD="root"
 
-readonly DRUPLOGIN="admin"
+readonly DRUPLOGIN="d8admin"
 readonly DRUPPSWD="password"
 
 readonly DBCONN="mysql://$DBLOGIN:$DBPSWD@$DBSERVER/$DBNAME"
