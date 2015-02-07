@@ -15,11 +15,16 @@ readonly DRUPLOGIN="d8admin"
 readonly DRUPPSWD="password"
 readonly DBCONN="mysql://$DBLOGIN:$DBPSWD@$DBSERVER/$DBNAME"
 
+readonly LMSCONFIG="lms.d8.config"
+
 # Download Drupal
 drush7 dl drupal-8
-mv docroot docroot.old
+rm -rf docroot
 mv drupal-$DVER docroot
 cd docroot
 
 drush7 si minimal --db-url="$DBCONN" --account-name=$DRUPLOGIN --account-pass=$DRUPPSWD --yes
-drush7 config-import config/lms.d8.config
+cp -r ../config/$LMSCONFIG sites/default/files
+mv sites/default/files/$LMSCONFIG sites/default/files/config_$LMSCONFIG
+echo "\$config_directories['$LMSCONFIG'] = 'sites/default/files/config_$LMSCONFIG';" >> sites/default/settings.php
+drush7 config-import $LMSCONFIG -y

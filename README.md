@@ -13,8 +13,17 @@ Learning Management System (LMS) based on [Drupal 8]. Main features include
 You need Gulp installed globally:
 
 ```sh
-$ bash -x /bin/lms.d8.install.with-config.sh
+$ sudo bash -x bin/lms.d8.install.with-config.sh
 ```
+
+It will create docroot folder with Drupal 8 installed in it.
+
+### Structure
+
+To install eeLMS you need:
+
+* config - configuration files
+* bin - helper scripts
 
 ### Requirements
 
