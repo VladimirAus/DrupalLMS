@@ -1,6 +1,6 @@
 uuid: c8c339a5-7e20-4d67-9300-f1e2926192df
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.tools
@@ -10,8 +10,8 @@ dependencies:
     - seven
 id: seven_tools
 theme: seven
-region: content
-weight: 0
+region: '-1'
+weight: -2
 provider: null
 plugin: 'system_menu_block:tools'
 settings:

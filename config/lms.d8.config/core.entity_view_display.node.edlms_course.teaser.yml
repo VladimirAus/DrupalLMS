@@ -23,5 +23,6 @@ content:
     settings:
       trim_length: 600
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_course_teachers: true
 third_party_settings: {  }
