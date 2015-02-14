@@ -18,12 +18,13 @@ readonly DBCONN="mysql://$DBLOGIN:$DBPSWD@$DBSERVER/$DBNAME"
 readonly LMSCONFIG="lms.d8.config"
 
 # Download Drupal
-drush7 dl drupal-8
+drush dl drupal-8
 rm -rf docroot
 mv drupal-$DVER docroot
 cd docroot
 
-drush7 si minimal --db-url="$DBCONN" --account-name=$DRUPLOGIN --account-pass=$DRUPPSWD --yes
+# drush sql-create --db-url="$DBCONN" --yes
+drush si minimal --db-url="$DBCONN" --account-name=$DRUPLOGIN --account-pass=$DRUPPSWD --yes
 # cp -r ../config/$LMSCONFIG sites/default/files
 # mv sites/default/files/$LMSCONFIG sites/default/files/config_$LMSCONFIG
 # chmod -r 775 sites/default/files/config_$LMSCONFIG
@@ -35,13 +36,13 @@ CONFIGDIR="$(ls -d c* | head -1)"
 cd ../../../../config/$LMSCONFIG
 cp -R . ../../docroot/sites/default/files/$CONFIGDIR/staging/
 
-cd ../..
-sed -i.bak "1s/.*/$SITEUUID/" docroot/sites/default/files/$CONFIGDIR/staging/system.site.yml
+# cd ../..
+# sed -i.bak "1s/.*/$SITEUUID/" docroot/sites/default/files/$CONFIGDIR/staging/system.site.yml
 
-cd docroot/
+# cd docroot/
 
 # Following commands do not work in core beta6
 # WORKAROUND: Login to website, enable config module, import staging
-# drush7 en config -y
-# drush7 config-import staging -y
+# drush en config -y
+# drush config-import staging -y
 
