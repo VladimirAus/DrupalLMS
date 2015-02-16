@@ -1,10 +1,10 @@
-id: node.search_result
 uuid: 742acf32-c222-4e34-a503-3e8aee7abf33
-label: 'Search result highlighting input'
-targetEntityType: node
-status: false
-cache: true
 langcode: und
+status: false
 dependencies:
   module:
     - node
+id: node.search_result
+label: 'Search result highlighting input'
+targetEntityType: node
+cache: true
