@@ -40,6 +40,7 @@ cp -R . ../../docroot/sites/default/files/$CONFIGDIR/staging/
 # Following commands do not work in core beta6 and earlier
 # Comment all commands and proceed to instaructons
 
+# replace import UUID with site UUID
 cd ../..
 sed -i.bak "1s/.*/$SITEUUID/" docroot/sites/default/files/$CONFIGDIR/staging/system.site.yml
 
@@ -47,4 +48,7 @@ cd docroot/
 
 drush en config -y
 drush config-import staging -y
+
+# name is not set via config at the moment
+drush config-set system.site name 'Project Lantern' -y
 
