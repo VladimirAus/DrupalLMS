@@ -5,4 +5,4 @@ dependencies: {  }
 id: html_year
 label: 'HTML Year'
 locked: true
-pattern: Y
+pattern: 'Y'

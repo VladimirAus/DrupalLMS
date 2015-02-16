@@ -25,5 +25,4 @@ settings:
     target_bundles: {  }
     sort:
       field: _none
-third_party_settings: {  }
 field_type: entity_reference

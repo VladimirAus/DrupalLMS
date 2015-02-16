@@ -226,7 +226,7 @@ display:
           type: published-notpublished
           type_custom_true: ''
           type_custom_false: ''
-          not: ''
+          not: false
           plugin_id: boolean
           entity_type: node
           entity_field: status
