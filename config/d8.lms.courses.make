@@ -3,8 +3,8 @@ core = 8.x
 api = 2
 
 ; Core
-projects[drupal][version] = "8.0.0-dev"
+projects[drupal][version] = "8.0.x"
 
 ; Modules
-projects[restui][version] = "1.9+5-dev"
+projects[restui][version] = "1.x"
 
