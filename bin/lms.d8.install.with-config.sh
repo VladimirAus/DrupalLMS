@@ -22,11 +22,12 @@ readonly LMSCONFIG="lms.d8.config"
 # drush dl drupal-8.0.x # install latest Drupal
 rm -rf docroot
 # mv drupal-$DVER docroot
-# cd docroot
+drush make config/d8.lms.courses.make docroot --yes
+cd docroot
 
 # drush sql-create --db-url="$DBCONN" --yes
-# drush si minimal --db-url="$DBCONN" --account-name=$DRUPLOGIN --account-pass=$DRUPPSWD --yes
-drush make config/d8.lms.courses.make docroot
+drush si minimal --db-url="$DBCONN" --account-name=$DRUPLOGIN --account-pass=$DRUPPSWD --yes
+pause 'Press [Enter] key to continue...'
 
 # cp -r ../config/$LMSCONFIG sites/default/files
 # mv sites/default/files/$LMSCONFIG sites/default/files/config_$LMSCONFIG
@@ -47,6 +48,7 @@ cd ../..
 sed -i.bak "1s/.*/$SITEUUID/" docroot/sites/default/files/$CONFIGDIR/staging/system.site.yml
 
 cd docroot/
+chmod 766 sites/default/settings.php
 
 drush en config -y
 drush config-import staging -y
