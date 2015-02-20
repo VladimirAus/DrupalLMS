@@ -19,13 +19,15 @@ readonly DBCONN="mysql://$DBLOGIN:$DBPSWD@$DBSERVER/$DBNAME"
 readonly LMSCONFIG="lms.d8.config"
 
 # Download Drupal
-drush dl drupal-8.0.x # install latest Drupal
+# drush dl drupal-8.0.x # install latest Drupal
 rm -rf docroot
-mv drupal-$DVER docroot
-cd docroot
+# mv drupal-$DVER docroot
+# cd docroot
 
 # drush sql-create --db-url="$DBCONN" --yes
-drush si minimal --db-url="$DBCONN" --account-name=$DRUPLOGIN --account-pass=$DRUPPSWD --yes
+# drush si minimal --db-url="$DBCONN" --account-name=$DRUPLOGIN --account-pass=$DRUPPSWD --yes
+drush make config/d8.lms.courses.make docroot
+
 # cp -r ../config/$LMSCONFIG sites/default/files
 # mv sites/default/files/$LMSCONFIG sites/default/files/config_$LMSCONFIG
 # chmod -r 775 sites/default/files/config_$LMSCONFIG
