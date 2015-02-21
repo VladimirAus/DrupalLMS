@@ -1,52 +1,78 @@
-# Project Lantern - Drupal 8 LMS
-Learning Management System (LMS) based on [Drupal 8]. Main features include
-
-  - Student, teacher, school user types
-  - Course management
-  - Quiz management
+# Project Lantern - Drupal 8 Headless
+Headless Drupal 8 distribution.
 
 ### Version
 0.0.2
 
-### Installation
+### Installation & deployment
 
-#### Current Drupal 8 dev (version > beta 6)
+
+##### Backend
 
 ```sh
-$ sudo bash -x bin/lms.d8.install.with-config.sh
+$ sudo bash -x bin/d8.back.deploy.sh
+```
+Steps:
+* Downloads latest version (dev) of Drupal 8 based on make file into docroot folder.
+* Installs minimal profiles.
+* Imports yml configuration files.
+
+Note, change settings (database, LAMP, login) in sh script prior to execution.
+
+Note, point your domain to docroot folder.
+
+##### Front
+
+To install (to run once): 
+```sh
+$ cd frontang/
+$ npm install && bower install
 ```
 
-The command will create docroot folder with Drupal 8 installed in it and will import the settings.
+To update: 
+```sh
+$ sudo bash -x bin/d8.front.deploy.sh
+```
+Steps:
+* Compiles application into frontang/dist folder based on Grunt settings.
+* Moves frontang/dist to docroot/dist 
 
-#### Drupal 8 beta 6 and lower
-
-[Installation Instructions for Drupal 8 beta]
+Note, [yeoman angular+require] is not working properly
 
 ### Project Structure
 
 * config - configuration files
 * bin - helper scripts
+* frontang - development forlder of frontend based on [yeoman angular]
 
 ### Requirements
 
-To install eeLMS you need:
+To install frontend you need:
+
+* [nodeJS]
+* [Bower]
+* [Grunt]
+* [Yeoman]
+
+To install backend you need:
 
 * Drush (version 7)
 * LAMP stack
 
 
-### Todo's
-
- - Auto import
- - Basic course structure
 
 License
 ----
 
-MIT
+GNU
 
 
 **Free Software, Hell Yeah!**
 
 [Drupal 8]:http://www.drupal.org/
-[Installation Instructions for Drupal 8 beta]:https://github.com/VladimirAus/DrupalLMS/blob/master/install.md
+[nodeJS]:https://docs.npmjs.com/getting-started/installing-node
+[Bower]:http://bower.io/#install-bower
+[Grunt]:http://gruntjs.com/
+[Yeoman]:http://yeoman.io/
+[yeoman angular]:https://github.com/aaronallport/generator-angular
+[yeoman angular+require]:https://github.com/aaronallport/generator-angular-require
