@@ -3,7 +3,7 @@
 describe('Controller: AboutCtrl', function () {
 
   // load the controller's module
-  beforeEach(module('d8frontendApp'));
+  beforeEach(module('d8OnepageApp'));
 
   var AboutCtrl,
     scope;

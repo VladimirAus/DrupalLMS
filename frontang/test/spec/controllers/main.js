@@ -3,7 +3,7 @@
 describe('Controller: MainCtrl', function () {
 
   // load the controller's module
-  beforeEach(module('d8frontendApp'));
+  beforeEach(module('d8OnepageApp'));
 
   var MainCtrl,
     scope;

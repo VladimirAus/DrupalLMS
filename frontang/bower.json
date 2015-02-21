@@ -1,5 +1,5 @@
 {
-  "name": "d8frontend",
+  "name": "d8-onepage",
   "version": "0.0.0",
   "dependencies": {
     "angular": "^1.3.0",
@@ -15,5 +15,5 @@
     "angular-mocks": "^1.3.0"
   },
   "appPath": "app",
-  "moduleName": "d8frontendApp"
+  "moduleName": "d8OnepageApp"
 }

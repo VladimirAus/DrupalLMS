@@ -2,14 +2,14 @@
 
 /**
  * @ngdoc overview
- * @name d8frontendApp
+ * @name d8OnepageApp
  * @description
- * # d8frontendApp
+ * # d8OnepageApp
  *
  * Main module of the application.
  */
 angular
-  .module('d8frontendApp', [
+  .module('d8OnepageApp', [
     'ngAnimate',
     'ngCookies',
     'ngResource',
