@@ -1,7 +1,7 @@
 #!/bin/bash
 
+sudo rm -rf docroot/dist/
 cd frontang
 rm -rf dist
-grunt
-cd ..
-mv frontang/dist docroot/_dist
+sudo rm -rf .tmp
+grunt --force && sudo mv dist ../docroot
