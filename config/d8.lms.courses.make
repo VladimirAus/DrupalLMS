@@ -3,7 +3,13 @@ core = 8.x
 api = 2
 
 ; Core
-projects[drupal][version] = "8.0.x"
+;; Themes do not work as of 22-Feb
+; projects[drupal][version] = "8.0.x"
+
+;; Beta 6 with patch
+projects[drupal][type] = core
+projects[drupal][version] = 8.0.0-beta6
+projects[drupal][patch][] = "https://www.drupal.org/files/issues/2421005-hasContainer-1.patch"
 
 ; Modules
 projects[restui][version] = "1.x"

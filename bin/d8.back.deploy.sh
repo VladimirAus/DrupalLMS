@@ -24,10 +24,12 @@ sudo rm -rf docroot
 # mv drupal-$DVER docroot
 drush make config/d8.lms.courses.make docroot --yes
 cd docroot
-chmod -R 777 sites/default/files
+# sudo chmod -R 777 sites/default/files
 
 # drush sql-create --db-url="$DBCONN" --yes
 drush si minimal --db-url="$DBCONN" --account-name=$DRUPLOGIN --account-pass=$DRUPPSWD --yes
+drush en bartik --yes
+drush dis stark --yes
 chmod 755 sites/default/settings.php
 
 # cp -r ../config/$LMSCONFIG sites/default/files
@@ -52,7 +54,7 @@ sed -i.bak "1s/.*/$SITEUUID/" docroot/sites/default/files/$CONFIGDIR/staging/sys
 cd docroot/
 
 drush en config -y
-# drush config-import staging -y
+drush config-import staging -y
 
 # name is not set via config at the moment
 # drush config-set system.site name 'Project Lantern' -y
